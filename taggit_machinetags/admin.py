@@ -1,7 +1,5 @@
 from __future__ import unicode_literals
-
 from django.contrib import admin
-
 from taggit_machinetags.models import MachineTag, MachineTaggedItem
 
 
@@ -20,11 +18,6 @@ class MachineTagAdmin(admin.ModelAdmin):
     #prepopulated_fields = {"slug": ["name"]}
     fieldsets = (
         (None, {'fields': ('namespace', 'name')}),
-        ('Advanced options', {
-                'classes': (),
-                'fields':(),
-                        }),
                 )
-
 
 admin.site.register(MachineTag, MachineTagAdmin)
